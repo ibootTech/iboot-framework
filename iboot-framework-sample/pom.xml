@@ -11,4 +11,12 @@
 
     <artifactId>iboot-framework-sample</artifactId>
     <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>tech.iboot</groupId>
+            <artifactId>commons-database</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
 </project>

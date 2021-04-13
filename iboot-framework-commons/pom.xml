@@ -10,5 +10,16 @@
     </parent>
 
     <artifactId>iboot-framework-commons</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+    <modules>
+        <module>commons-database</module>
+        <module>commons-quartz</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>tech.iboot</groupId>
+            <artifactId>iboot-framework-core</artifactId>
+            <version>${revision}</version>
+        </dependency>
+    </dependencies>
 </project>
