@@ -1,5 +1,9 @@
 package tech.iboot.commons.database.mybatis.core;
 
+import tech.iboot.core.util.SpringContextUtil;
+
+import javax.sql.DataSource;
+import java.sql.SQLException;
 import java.util.Map;
 
 /**
@@ -20,8 +24,18 @@ public class SqlBuilder {
         return sql;
     }
     public String nativeSQLForOne(Map params){
+        DataSource dataSource = SpringContextUtil.getInstance().getBean("druidDataSource");
+        String dataSourceType = "";
         String sql = buildSql(params);
-        sql = sql +" LIMIT 1 ";
+        try {
+            dataSourceType = dataSource.getConnection().getMetaData().getDatabaseProductName();
+            // todo 先实现mysql
+            if ("MySQL".equals(dataSourceType)) {
+                sql = sql +" LIMIT 1 ";
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return sql;
     }
     public String buildSql(Map params){

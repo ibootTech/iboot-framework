@@ -4,18 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
+        <artifactId>iboot-starter</artifactId>
         <groupId>tech.iboot</groupId>
-        <artifactId>iboot-framework</artifactId>
         <version>${revision}</version>
     </parent>
-
-    <artifactId>iboot-framework-sample</artifactId>
+    <artifactId>iboot-starter-database</artifactId>
     <packaging>jar</packaging>
-
     <dependencies>
         <dependency>
             <groupId>tech.iboot</groupId>
-            <artifactId>commons-database</artifactId>
+            <artifactId>iboot-commons-database</artifactId>
             <version>${revision}</version>
         </dependency>
     </dependencies>

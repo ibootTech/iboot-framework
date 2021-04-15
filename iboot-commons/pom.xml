@@ -9,16 +9,16 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>iboot-framework-commons</artifactId>
+    <artifactId>iboot-commons</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>commons-database</module>
-        <module>commons-quartz</module>
+        <module>iboot-commons-database</module>
+        <module>iboot-commons-quartz</module>
     </modules>
     <dependencies>
         <dependency>
             <groupId>tech.iboot</groupId>
-            <artifactId>iboot-framework-core</artifactId>
+            <artifactId>iboot-core</artifactId>
             <version>${revision}</version>
         </dependency>
     </dependencies>

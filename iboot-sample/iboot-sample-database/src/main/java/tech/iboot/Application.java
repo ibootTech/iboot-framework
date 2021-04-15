@@ -5,11 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author luohong
- * @date 2020/10/6
- * @remark
- * @email luohong@iboot.tech
- * @url https://iboot.tech
- **/
+ * @date 2021/4/15
+ */
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {
