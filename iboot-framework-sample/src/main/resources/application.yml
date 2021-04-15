@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: iboot-framework-sample
+  profiles:
+    active: dev
+tech:
+  iboot:
+    version:
+      1.0.0

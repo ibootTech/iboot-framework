@@ -4,34 +4,33 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
+        <artifactId>iboot-framework-commons</artifactId>
         <groupId>tech.iboot</groupId>
-        <artifactId>iboot-framework</artifactId>
         <version>${revision}</version>
     </parent>
-
-    <artifactId>iboot-framework-core</artifactId>
+    <artifactId>commons-quartz</artifactId>
     <packaging>jar</packaging>
 
     <properties>
-        <fastjson.version>1.2.73</fastjson.version>
-        <lombok.version>1.16.20</lombok.version>
+        <quartz.version>2.3.0</quartz.version>
     </properties>
 
     <dependencies>
         <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz-jobs</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
+            <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
     </dependencies>
-
 </project>
