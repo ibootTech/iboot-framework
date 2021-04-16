@@ -6,7 +6,7 @@
     <parent>
         <artifactId>iboot-starter</artifactId>
         <groupId>tech.iboot</groupId>
-        <version>${revision}</version>
+        <version>0.0.4</version>
     </parent>
     <artifactId>iboot-starter-database</artifactId>
     <packaging>jar</packaging>
@@ -14,7 +14,7 @@
         <dependency>
             <groupId>tech.iboot</groupId>
             <artifactId>iboot-commons-database</artifactId>
-            <version>${revision}</version>
+            <version>0.0.4</version>
         </dependency>
     </dependencies>
 </project>

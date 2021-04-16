@@ -6,7 +6,7 @@
     <parent>
         <groupId>tech.iboot</groupId>
         <artifactId>iboot-framework</artifactId>
-        <version>${revision}</version>
+        <version>0.0.4</version>
     </parent>
 
     <artifactId>iboot-commons</artifactId>
@@ -19,7 +19,7 @@
         <dependency>
             <groupId>tech.iboot</groupId>
             <artifactId>iboot-core</artifactId>
-            <version>${revision}</version>
+            <version>0.0.4</version>
         </dependency>
     </dependencies>
 </project>
