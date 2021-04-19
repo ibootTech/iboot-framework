@@ -6,7 +6,7 @@
     <parent>
         <artifactId>iboot-commons</artifactId>
         <groupId>tech.iboot</groupId>
-        <version>0.0.4</version>
+        <version>0.0.5</version>
     </parent>
     <artifactId>iboot-commons-database</artifactId>
     <packaging>jar</packaging>
