@@ -1,0 +1,4 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+tech.iboot.framework.core.properties.IBootProperties,\
+tech.iboot.framework.core.configuration.IBootCoreConfiguration

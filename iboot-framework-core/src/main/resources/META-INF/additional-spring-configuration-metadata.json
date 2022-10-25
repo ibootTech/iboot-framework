@@ -1,0 +1,29 @@
+{
+  "groups": [
+    {
+      "name": "iboot",
+      "type": "tech.iboot.framework.core.properties.IBootProperties",
+      "sourceType": "tech.iboot.framework.core.properties.IBootProperties"
+    },
+    {
+      "name": "iboot.banner",
+      "type": "tech.iboot.framework.core.properties.IBootProperties$Banner",
+      "sourceType": "tech.iboot.framework.core.properties.IBootProperties",
+      "sourceMethod": "getBanner()"
+    },
+    {
+      "name": "iboot.banner.enabled",
+      "type": "tech.iboot.framework.core.properties.IBootProperties$Banner$enabled",
+      "sourceType": "tech.iboot.framework.core.properties.IBootProperties$Banner",
+      "sourceMethod": "isEnabled()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "iboot.banner.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "tech.iboot.framework.core.properties.IBootProperties$Banner",
+      "defaultValue": true
+    }
+  ]
+}

@@ -13,9 +13,9 @@
     <artifactId>iboot-framework-core</artifactId>
     <packaging>jar</packaging>
 
-    <name>IBoot Framework Core</name>
-    <url>https://github.com/ibootTech/iboot-framework</url>
-    <description>IBoot Framework Core Module.</description>
+    <name>iBoot Framework Core</name>
+    <url>https://github.com/ibootTech/iboot-framework/tree/master/iboot-framework-core</url>
+    <description>iBoot Framework Core Module.</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
