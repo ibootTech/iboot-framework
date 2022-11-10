@@ -15,16 +15,16 @@ import java.util.Collection;
  * @Email luohong@iboot.tech
  * @Desc 获取spring上下文、bean、推送事件等
  **/
-public class IBootContextHolder implements ApplicationContextAware, DisposableBean {
+public class SpringContextHolder implements ApplicationContextAware, DisposableBean {
     private static ApplicationContext applicationContext;
-    public IBootContextHolder() {}
+    public SpringContextHolder() {}
     @Override
     public void destroy() throws Exception {
         clearHolder();
     }
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        IBootContextHolder.applicationContext = applicationContext;
+        SpringContextHolder.applicationContext = applicationContext;
     }
 
     /**

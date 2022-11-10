@@ -7,7 +7,7 @@ package tech.iboot.framework.core.configuration;
  * @Email luohong@iboot.tech
  * @Desc
  **/
-public abstract class IBootBeanName {
+public abstract class BeanName {
     @SuppressWarnings("SpellCheckingInspection")
     public final static String IBOOT_INIT = "iBootInit";
     public final static String ASSEMBLE_MESSAGE_SOURCE = "assembleMessageSource";

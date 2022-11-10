@@ -1,6 +1,6 @@
 package tech.iboot.framework.core.messageSource;
 
-import tech.iboot.framework.core.configuration.IBootContextHolder;
+import tech.iboot.framework.core.configuration.SpringContextHolder;
 
 /**
  * Created on 2022/10/5
@@ -23,7 +23,7 @@ public class MsHandler {
             instance = new MsHandler();
         }
         if (instance.assembleMessageSource == null) {
-            instance.assembleMessageSource = IBootContextHolder.getBean(AssembleMessageSource.class);
+            instance.assembleMessageSource = SpringContextHolder.getBean(AssembleMessageSource.class);
         }
         return instance;
     }

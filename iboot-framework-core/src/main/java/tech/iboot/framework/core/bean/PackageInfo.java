@@ -11,20 +11,16 @@ import java.util.jar.Attributes;
 import java.util.jar.JarFile;
 
 /**
- * Created on 2022/10/2
- * 包信息
+ * <strong>包信息</strong>
+ * <p>版本号、标题、供应者</p>
+ * @date Created on 2022/10/2
  * @author Hong Luo
- * @Email luohong@iboot.tech
- * @Desc 版本号、标题、供应者
  **/
 public class PackageInfo {
     private static final String DEFAULT_VENDOR = "iboot.tech";
     private static final String DEFAULT_TITLE = "iboot framework";
     private static final String DEFAULT_VERSION = "1.0.0";
     private final BiFunction<String, Attributes.Name, Boolean> IS_NULL = (t1, t2) -> (t1 == null || "".equals(t1)) && t2!=null;
-    /**
-     * 版本号
-     */
     private String version;
     /**
      * 标题
@@ -38,7 +34,7 @@ public class PackageInfo {
     private JarFile jarFile;
     private PackageInfo() {}
     /**
-     * Created on 2022/10/2
+     * @date Created on 2022/10/2
      * 构造函数
      * @author Hong Luo
      * @param clazz 类

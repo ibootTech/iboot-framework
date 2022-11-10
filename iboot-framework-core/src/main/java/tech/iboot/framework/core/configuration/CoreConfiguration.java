@@ -29,8 +29,8 @@ import java.util.stream.Collectors;
  * @Email luohong@iboot.tech
  * @Desc 配置项有框架启动bean、聚合messageSource bean、关机处理等
  **/
-public class IBootCoreConfiguration implements DisposableBean {
-    private final Logger logger = LoggerFactory.getLogger(IBootCoreConfiguration.class);
+public class CoreConfiguration implements DisposableBean {
+    private final Logger logger = LoggerFactory.getLogger(CoreConfiguration.class);
 
     private AssembleMessageSource assembleMessageSource;
     @Resource
@@ -42,14 +42,14 @@ public class IBootCoreConfiguration implements DisposableBean {
      * @author Hong Luo
      **/
     @Bean
-    @DependsOn(IBootBeanName.ASSEMBLE_MESSAGE_SOURCE)
+    @DependsOn(BeanName.ASSEMBLE_MESSAGE_SOURCE)
     public void iBootInit() {
         BannerPrinter printer = new BannerPrinter(logger);
         if (iBootProperties.getBanner().isEnabled()) {
             printer.print(ResourceBundleUtil.getResourceByFileName("iBootBanner.txt"),
-                    new PackageInfo(IBootCoreConfiguration.class));
+                    new PackageInfo(CoreConfiguration.class));
         } else {
-            printer.print(new PackageInfo(IBootCoreConfiguration.class));
+            printer.print(new PackageInfo(CoreConfiguration.class));
         }
     }
 
@@ -65,7 +65,7 @@ public class IBootCoreConfiguration implements DisposableBean {
         assembleMessageSource.addMessageSource(AbstractMessageSourceI18nConfiguration.buildCorsConfiguration());
         assembleMessageSource.addMessageSources(objectProvider.stream().collect(Collectors.toList()));
         logger.info(AnsiOutput.toString(AnsiColor.GREEN,
-                assembleMessageSource.getMessage("register.success", new String[]{IBootBeanName.ASSEMBLE_MESSAGE_SOURCE},
+                assembleMessageSource.getMessage("register.success", new String[]{BeanName.ASSEMBLE_MESSAGE_SOURCE},
                         Locale.getDefault()), AnsiColor.DEFAULT));
         this.assembleMessageSource = assembleMessageSource;
         return  assembleMessageSource;

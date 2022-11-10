@@ -1,5 +1,5 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 tech.iboot.framework.core.properties.IBootProperties,\
-tech.iboot.framework.core.configuration.IBootCoreConfiguration,\
-tech.iboot.framework.core.configuration.IBootContextHolder
+tech.iboot.framework.core.configuration.CoreConfiguration,\
+tech.iboot.framework.core.configuration.SpringContextHolder
