@@ -71,7 +71,7 @@ public class CoreConfiguration implements DisposableBean {
     @Primary
     public MessageSource assembleMessageSource(ObjectProvider<MessageSource> objectProvider) {
         AssembleMessageSource assembleMessageSource = new AssembleMessageSourceImpl();
-        assembleMessageSource.addMessageSource(AbstractMessageSourceI18nConfiguration.buildCorsConfiguration());
+        assembleMessageSource.addMessageSource(AbstractMessageSourceI18nConfiguration.buildI18nMessageSourceConfiguration());
         assembleMessageSource.addMessageSources(objectProvider.stream().collect(Collectors.toList()));
         logger.info(AnsiOutput.toString(AnsiColor.GREEN,
                 assembleMessageSource.getMessage("register.success", new String[]{BeanName.ASSEMBLE_MESSAGE_SOURCE},

@@ -2,6 +2,7 @@ package tech.iboot.framework.core.configuration;
 
 /**
  * <strong>bean名称常量</strong>
+ * <p></p>
  * Created on 2022/10/2
  *
  * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>

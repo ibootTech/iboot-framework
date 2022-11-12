@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * <strong>统一响应实体</strong>
  * <p>用于请求响应统一返回</p>
- * Created on 2022/11/12
+ * Created on 2022/10/6
  *
  * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/

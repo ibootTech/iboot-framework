@@ -13,11 +13,11 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
 
 /**
+ * <strong>聚合MessageSource实现类</strong>
+ * <p></p>
  * Created on 2022/10/5
- * 聚合MessageSource实现类
- * @author Hong Luo
- * @Email luohong@iboot.tech
- * @Desc
+ *
+ * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
 public class AssembleMessageSourceImpl implements AssembleMessageSource {
 
@@ -29,7 +29,12 @@ public class AssembleMessageSourceImpl implements AssembleMessageSource {
      * 默认locale
      */
     private final Locale DEFAULT_LOCALE = Locale.getDefault();
-    private final Function<String[], String> getCodeByResolvable = c -> Optional.ofNullable(c).isPresent() ? c[c.length -1] : "";
+
+    /**
+     * code数组转字符串函数
+     */
+    private final Function<String[], String> getCodeByResolvable =
+            c -> Optional.ofNullable(c).isPresent() ? c[c.length -1] : "";
 
     @Override
     public String getMessage(String code, Object[] args, String defaultMessage, Locale locale) {

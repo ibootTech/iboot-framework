@@ -8,20 +8,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Created on 2022/10/6
- * 类工具
- * @author Hong Luo
- * @Email luohong@iboot.tech
- * @Desc 类工具
+ * <strong>类工具</strong>
+ * <p></p>
+ * Created on 2022/10/5
+ *
+ * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
 public class ClassUtil {
 
     /**
-     * Created on 2022/10/6
-     * 根据类获取所有字段
-     * @author Hong Luo
+     * <strong>根据类获取所有字段</strong>
      * @param clazz 类
-     * @return List<Field>
+     * @return List<Field> 字段列表
      **/
     public static <T> List<Field> getField(Class<T> clazz) {
         List<Field> list = new ArrayList<>();
@@ -34,12 +32,10 @@ public class ClassUtil {
     }
 
     /**
-     * Created on 2022/10/6
-     * 根据类和注解类获取所有字段
-     * @author Hong Luo
+     * <strong>根据类和注解类获取所有字段</strong>
      * @param clazz 类
      * @param annotationClass 注解类
-     * @return List<Field>
+     * @return List<Field> 字段列表
      **/
     public static <T, K extends Annotation> List<Field> getFieldByAnnotation(Class<T> clazz, Class<K> annotationClass) {
         List<Field> list = getField(clazz);
@@ -48,9 +44,7 @@ public class ClassUtil {
     }
 
     /**
-     * Created on 2022/11/10
-     * 根据实体和注解类获取字段实际值
-     * @author Hong Luo
+     * <strong>根据实体和注解类获取字段实际值</strong>
      * @param t 实体
      * @param annotationClass 注解类
      * @return V 字段实际值
@@ -71,10 +65,8 @@ public class ClassUtil {
     }
 
     /**
-     * Created on 2022/10/6
-     * 获取main函数类
-     * @author Hong Luo
-     * @return 主类
+     * <strong>获取main函数所在类</strong>
+     * @return Class<?> 主类
      **/
     public static Class<?> deduceMainApplicationClass() {
         try {

@@ -3,11 +3,11 @@ package tech.iboot.framework.core.enums;
 import tech.iboot.framework.core.messageSource.MsHandler;
 
 /**
+ * <strong>响应状态码枚举</strong>
+ * <p></p>
  * Created on 2022/10/6
- * 响应状态码枚举
- * @author Hong Luo
- * @Email luohong@iboot.tech
- * @Desc
+ *
+ * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
 public enum BusinessResultCodeEnum {
     /**
@@ -26,7 +26,16 @@ public enum BusinessResultCodeEnum {
      */
     private final String msg;
 
+    /**
+     * 信息源处理器
+     */
     private final MsHandler msHandle = MsHandler.getInstance();
+
+    /**
+     * <strong>构造函数</strong>
+     * @param code 状态码
+     * @param msg 信息
+     **/
     BusinessResultCodeEnum(int code, String msg) {
         this.code = code;
         this.msg = msg;

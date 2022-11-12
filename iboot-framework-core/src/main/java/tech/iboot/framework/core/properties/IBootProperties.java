@@ -3,11 +3,11 @@ package tech.iboot.framework.core.properties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
+ * <strong>iBoot配置变量类</strong>
+ * <p></p>
  * Created on 2022/10/2
- * iBoot配置变量类
- * @author Hong Luo
- * @Email luohong@iboot.tech
- * @Desc 结合resources/META-INF/additional-spring-configuration-metadata.json使用
+ *
+ * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
 @ConfigurationProperties(IBootProperties.PREFIX)
 public class IBootProperties {

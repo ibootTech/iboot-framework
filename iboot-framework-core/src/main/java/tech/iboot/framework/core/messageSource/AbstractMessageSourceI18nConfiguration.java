@@ -18,16 +18,32 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
+ * <strong>国际化信息源</strong>
+ * <p>自动扫描获取资源文件夹i18n下文件，文件命名以_隔开</p>
  * Created on 2022/10/5
- * 国际化信息源
- * @author Hong Luo
- * @Email luohong@iboot.tech
- * @Desc 自动扫描获取资源文件夹i18n下文件，文件命名以_隔开
+ *
+ * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
 public class AbstractMessageSourceI18nConfiguration {
+
+    /**
+     * slf4j日志打印工具
+     */
     private static final Logger logger = LoggerFactory.getLogger(AbstractMessageSourceI18nConfiguration.class);
+
+    /**
+     * i18n文件夹常量
+     */
     private static final String I18N = "i18n";
+
+    /**
+     * 文件分隔符
+     */
     private static final String SYMBOL = "_";
+
+    /**
+     * 获取资源文件路径函数
+     */
     private static final Function<Resource, String> RESOURCE_PATH = r -> {
         try {
             return r.getURL().getPath();
@@ -35,6 +51,10 @@ public class AbstractMessageSourceI18nConfiguration {
             return null;
         }
     };
+
+    /**
+     * 获取资源文件路径数组函数
+     */
     private static final Function<String, String[]> PATH_SUB = t -> {
         String p = t;
         p = p.substring(p.indexOf(I18N));
@@ -45,7 +65,11 @@ public class AbstractMessageSourceI18nConfiguration {
         splitPath[splitPath.length - 1] = name;
         return splitPath;
     };
-    public static ResourceBundleMessageSource buildCorsConfiguration() {
+    /**
+     * <strong>获取i18n信息源</strong>
+     * @return ResourceBundleMessageSource
+     **/
+    public static ResourceBundleMessageSource buildI18nMessageSourceConfiguration() {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
         messageSource.setDefaultEncoding(StandardCharsets.UTF_8.displayName());
         try {
