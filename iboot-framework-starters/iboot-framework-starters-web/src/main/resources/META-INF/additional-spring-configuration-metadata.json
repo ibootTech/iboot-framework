@@ -1,0 +1,87 @@
+{
+  "groups": [
+    {
+      "name": "iboot.cors-filters",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties",
+      "sourceMethod": "getCorsFilters()"
+    },
+    {
+      "name": "iboot.cors-filters.url",
+      "type": "java.lang.String",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$CorsFilter",
+      "sourceMethod": "getUrl()"
+    },
+    {
+      "name": "iboot.cors-filters.origins",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$CorsFilter",
+      "sourceMethod": "getOrigins()"
+    },
+    {
+      "name": "iboot.cors-filters.headers",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$CorsFilter",
+      "sourceMethod": "getHeaders()"
+    },
+    {
+      "name": "iboot.cors-filters.methods",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$CorsFilter",
+      "sourceMethod": "getMethods()"
+    },
+    {
+      "name": "iboot.cors-filters.maxAge",
+      "type": "java.lang.Long",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$CorsFilter",
+      "sourceMethod": "getMaxAge()"
+    },
+    {
+      "name": "iboot.cors-filters.allowCredentials",
+      "type": "java.lang.Boolean",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$CorsFilter",
+      "sourceMethod": "getAllowCredentials()"
+    },
+    {
+      "name": "iboot.tomcat",
+      "type": "tech.iboot.framework.starter.web.configuration.WebProperties$Tomcat",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties",
+      "sourceMethod": "getTomcat()"
+    },
+    {
+      "name": "iboot.tomcat.access-log",
+      "type": "tech.iboot.framework.starter.web.configuration.WebProperties$AccessLog",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$Tomcat"
+    }
+  ],
+  "properties": [
+    {
+      "name": "iboot.tomcat.override",
+      "type": "java.lang.Boolean",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$Tomcat",
+      "sourceMethod": "isOverride()",
+      "defaultValue": true
+    },
+    {
+      "name": "iboot.tomcat.basedir",
+      "type": "java.lang.String",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$Tomcat",
+      "sourceMethod": "getBasedir()",
+      "defaultValue": "../"
+    },
+    {
+      "name": "iboot.tomcat.access-log.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$Tomcat$accessLog",
+      "sourceMethod": "isEnabled()",
+      "defaultValue": true
+    },
+    {
+      "name": "iboot.tomcat.access-log.pattern",
+      "type": "java.lang.String",
+      "sourceType": "tech.iboot.framework.starter.web.configuration.WebProperties$Tomcat$accessLog",
+      "sourceMethod": "getPattern()",
+      "defaultValue": "%h %l %u %t \"%r\" %s %b %D %{User-Agent}i"
+    }
+  ]
+}

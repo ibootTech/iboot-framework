@@ -10,12 +10,6 @@
       "type": "tech.iboot.framework.core.properties.IBootProperties$Banner",
       "sourceType": "tech.iboot.framework.core.properties.IBootProperties",
       "sourceMethod": "getBanner()"
-    },
-    {
-      "name": "iboot.banner.enabled",
-      "type": "tech.iboot.framework.core.properties.IBootProperties$Banner$enabled",
-      "sourceType": "tech.iboot.framework.core.properties.IBootProperties$Banner",
-      "sourceMethod": "isEnabled()"
     }
   ],
   "properties": [

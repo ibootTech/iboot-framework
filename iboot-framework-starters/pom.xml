@@ -17,9 +17,8 @@
     <url>https://github.com/ibootTech/iboot-framework</url>
     <description>IBoot Framework Starters Module.</description>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
+    <modules>
+        <module>iboot-framework-starters-web</module>
+    </modules>
 
 </project>

@@ -66,6 +66,7 @@
         <module>iboot-framework-core</module>
         <module>iboot-framework-commons</module>
         <module>iboot-framework-starters</module>
+        <module>iboot-framework-samples</module>
     </modules>
 
     <dependencyManagement>

@@ -17,8 +17,4 @@ public abstract class BeanName {
      * 聚合信息源bean名
      */
     public final static String ASSEMBLE_MESSAGE_SOURCE = "assembleMessageSource";
-    /**
-     * 跨域过滤bean名
-     */
-    public final static String CORS_FILTER = "corsFilter";
 }

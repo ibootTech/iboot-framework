@@ -1,0 +1,23 @@
+server:
+  port: 81
+logging:
+  file:
+    path: ../logs
+spring:
+  main:
+    banner-mode: off
+iboot:
+  banner:
+    enabled: true
+  tomcat:
+    override: true
+    access-log:
+      enabled: true
+      pattern: '%h %l %u %t "%r" %s %b %D %{User-Agent}i'
+    basedir: '../'
+  cors-filters:
+    - url: '/**'
+      methods:
+       - 'GET'
+      allow-credentials: true
+      max-age: 3600

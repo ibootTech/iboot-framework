@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="charset" value="UTF-8"/>
+    <springProperty scope="context" name="LOG_HOME" source="logging.file.path"/>
+   <!-- <property name="LOG_HOME" value="${logging.file.path}" />-->
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+
+            <pattern> %d{yyyy-MM-dd HH:mm:ss.SSS}  %green(%-5level)  %magenta(${PID}) --- %yellow([%thread])  %cyan(%logger{100}) :: %msg  %n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="INFO_FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/info.%d{yyyy-MM-dd}_%i.log</FileNamePattern>
+            <MaxHistory>10</MaxHistory>
+            <MaxFileSize>10MB</MaxFileSize>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern> %d{yyyy-MM-dd HH:mm:ss.SSS}  %-5level  ${PID} --- [%thread]  %logger{100} :: %msg  %n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="WARN_FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/warn.%d{yyyy-MM-dd}_%i.log</FileNamePattern>
+            <MaxHistory>10</MaxHistory>
+            <MaxFileSize>10MB</MaxFileSize>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern> %d{yyyy-MM-dd HH:mm:ss.SSS}  %-5level  ${PID} --- [%thread]  %logger{100} :: %msg  %n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="ERROR_FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${LOG_HOME}/error.%d{yyyy-MM-dd}_%i.log</FileNamePattern>
+            <MaxHistory>60</MaxHistory>
+            <MaxFileSize>10MB</MaxFileSize>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern> %d{yyyy-MM-dd HH:mm:ss.SSS}  %-5level  ${PID} --- [%thread]  %logger{100} :: %msg  %n</pattern>
+        </encoder>
+    </appender>
+
+
+  <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="WARN_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+</configuration>
