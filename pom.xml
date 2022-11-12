@@ -196,7 +196,7 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven-javadoc-plugin.version}</version>
                         <configuration>
-                            <show>package</show>
+                            <show>private</show>
                             <tags>
                                 <tag>
                                     <name>date</name>
@@ -263,7 +263,7 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>${maven-javadoc-plugin.version}</version>
                         <configuration>
-                            <show>package</show>
+                            <show>private</show>
                             <tags>
                                 <tag>
                                     <name>date</name>

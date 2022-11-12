@@ -9,18 +9,33 @@ import java.security.CodeSource;
 import java.util.function.BiFunction;
 import java.util.jar.Attributes;
 import java.util.jar.JarFile;
-
 /**
  * <strong>包信息</strong>
  * <p>版本号、标题、供应者</p>
- * @date Created on 2022/10/2
- * @author Hong Luo
+ * Created on 2022/10/2
+ *
+ * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
 public class PackageInfo {
+    /**
+     * 默认供应商
+     */
     private static final String DEFAULT_VENDOR = "iboot.tech";
+    /**
+     * 默认标题
+     */
     private static final String DEFAULT_TITLE = "iboot framework";
+    /**
+     * 默认版本号
+     */
     private static final String DEFAULT_VERSION = "1.0.0";
+    /**
+     * 判断属性是否为空
+     */
     private final BiFunction<String, Attributes.Name, Boolean> IS_NULL = (t1, t2) -> (t1 == null || "".equals(t1)) && t2!=null;
+    /**
+     * 版本号
+     */
     private String version;
     /**
      * 标题
@@ -30,13 +45,18 @@ public class PackageInfo {
      * 供应者
      */
     private String vendor;
+    /**
+     * 类
+     */
     private Class<?> clazz;
+    /**
+     * jar包文件
+     */
     private JarFile jarFile;
     private PackageInfo() {}
     /**
-     * @date Created on 2022/10/2
-     * 构造函数
-     * @author Hong Luo
+     * <strong>构造函数</strong>
+     *
      * @param clazz 类
      **/
     public PackageInfo(Class<?> clazz) {
@@ -54,13 +74,12 @@ public class PackageInfo {
     }
 
     /**
-     * Created on 2022/10/2
-     * 从jar中获取信息
-     * @author Hong Luo
+     * <strong>从jar中获取信息</strong>
+     *
      * @param packageStr 字段信息
      * @param defaultStr 默认值
-     * @param keys 字段标识
-     * @return java.lang.String 字段信息
+     * @param keys  字段标识
+     * @return java.lang.String  字段信息
      **/
     private String getValueFromJar(String packageStr, String defaultStr, Attributes.Name ... keys){
         if (packageStr != null) {
@@ -82,10 +101,9 @@ public class PackageInfo {
     }
 
     /**
-     * Created on 2022/10/2
-     * 获取jar包信息
-     * @author Hong Luo
-     * @return java.util.jar.JarFile
+     * <strong>获取jar包信息</strong>
+     *
+     * @return java.util.jar.JarFile jar包文件
      **/
     private JarFile getJarFile() {
         if (this.jarFile != null) {

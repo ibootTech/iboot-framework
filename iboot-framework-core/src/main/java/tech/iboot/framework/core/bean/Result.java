@@ -5,13 +5,16 @@ import tech.iboot.framework.core.enums.BusinessResultCodeEnum;
 import java.io.Serializable;
 
 /**
- * Created on 2022/11/6
- * 统一响应实体
- * @author Hong Luo
- * @Email luohong@iboot.tech
- * @Desc 用于请求响应统一返回
+ * <strong>统一响应实体</strong>
+ * <p>用于请求响应统一返回</p>
+ * Created on 2022/11/12
+ *
+ * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
 public class Result<T> implements Serializable {
+    /**
+     * 序列化
+     */
     private static final long serialVersionUID = 1L;
     /**
      * 状态码
@@ -26,6 +29,14 @@ public class Result<T> implements Serializable {
      */
     private T data;
     public Result() {}
+
+    /**
+     * <strong>构造函数</strong>
+     *
+     * @param code 状态码
+     * @param data 数据
+     * @param msg  信息
+     **/
     public Result(int code, T data, String msg) {
         this.code = code;
         this.data = data;
@@ -33,9 +44,8 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * Created on 2022/10/6
-     * 构建成功响应实体
-     * @author Hong Luo
+     * <strong>构建成功响应实体</strong>
+     *
      * @return Result<T>
      **/
     public static <T> Result<T> success() {
@@ -43,10 +53,9 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * Created on 2022/10/6
-     * 构建成功响应实体
-     * @author Hong Luo
-     * @param data 数据
+     * <strong>构建成功响应实体</strong>
+     *
+     * @param data  数据
      * @return Result<T>
      **/
     public static <T> Result<T> success(T data) {
@@ -54,9 +63,8 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * Created on 2022/10/6
-     * 构建成功响应实体
-     * @author Hong Luo
+     * <strong>构建成功响应实体</strong>
+     *
      * @param msg 信息
      * @return Result<T>
      **/
@@ -65,11 +73,10 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * Created on 2022/10/6
-     * 构建成功响应实体
-     * @author Hong Luo
+     * <strong>构建成功响应实体</strong>
+     *
      * @param data 数据
-     * @param msg 信息
+     * @param msg  信息
      * @return Result<T>
      **/
     public static <T> Result<T> success(T data, String msg) {
@@ -77,9 +84,8 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * Created on 2022/10/6
-     * 构建失败响应实体
-     * @author Hong Luo
+     * <strong>构建失败响应实体</strong>
+     *
      * @return Result<T>
      **/
     public static <T> Result<T> fail() {
@@ -87,9 +93,8 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * Created on 2022/10/6
-     * 构建失败响应实体
-     * @author Hong Luo
+     * <strong>构建失败响应实体</strong>
+     *
      * @param data 数据
      * @return Result<T>
      **/
@@ -98,9 +103,8 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * Created on 2022/10/6
-     * 构建失败响应实体
-     * @author Hong Luo
+     * <strong>构建失败响应实体</strong>
+     *
      * @param msg 信息
      * @return Result<T>
      **/
@@ -109,9 +113,8 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * Created on 2022/10/6
-     * 构建失败响应实体
-     * @author Hong Luo
+     * <strong>构建失败响应实体</strong>
+     *
      * @param data 数据
      * @param msg 信息
      * @return Result<T>
@@ -119,11 +122,10 @@ public class Result<T> implements Serializable {
     public static <T> Result<T> fail(T data, String msg) {
         return result(BusinessResultCodeEnum.FAIL.getCode(), data, msg);
     }
-    
+
     /**
-     * Created on 2022/10/6
-     * 构建响应实体
-     * @author Hong Luo
+     * <strong>构建响应实体</strong>
+     *
      * @param code 状态码
      * @param data 数据
      * @param msg 信息

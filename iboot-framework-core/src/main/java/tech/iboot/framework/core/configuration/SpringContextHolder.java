@@ -9,28 +9,42 @@ import org.springframework.context.ApplicationEvent;
 import java.util.Collection;
 
 /**
- * Created on 2022/10/5
- * 上下文持有工具
- * @author Hong Luo
- * @Email luohong@iboot.tech
- * @Desc 获取spring上下文、bean、推送事件等
+ * <strong>spring上下文持有工具</strong>
+ * <p>获取spring上下文、bean、推送事件等</p>
+ * Created on 2022/10/2
+ *
+ * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
 public class SpringContextHolder implements ApplicationContextAware, DisposableBean {
+
+    /**
+     * Spring Application 上下文
+     */
     private static ApplicationContext applicationContext;
     public SpringContextHolder() {}
+
+    /**
+     * <strong>销毁后清理Holder</strong>
+     * @throws Exception 异常
+     **/
     @Override
     public void destroy() throws Exception {
         clearHolder();
     }
+
+    /**
+     * <strong>设置Holder</strong>
+     *
+     * @param applicationContext spring Application 上下文
+     **/
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         SpringContextHolder.applicationContext = applicationContext;
     }
 
     /**
-     * Created on 2022/10/5
-     * 获取上下文
-     * @author Hong Luo
+     * <strong>获取上下文</strong>
+     *
      * @return 上下文
      **/
     public static ApplicationContext getApplicationContext() {
@@ -39,43 +53,38 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * Created on 2022/10/5
-     * 根据类获取bean类型
-     * @author Hong Luo
+     * <strong>根据类获取bean类型</strong>
+     *
      * @param clazz 类
-     * @return  bean类型
+     * @return java.util.Collection<T>  bean类型
      **/
     public static <T> Collection<T> getBeansOfType(Class<T> clazz) {
         return getApplicationContext().getBeansOfType(clazz).values();
     }
 
     /**
-     * Created on 2022/10/5
-     * 根据类获取bean
-     * @author Hong Luo
+     * <strong>根据类获取bean</strong>
+     *
      * @param clazz 类
-     * @return  bean
+     * @return bean
      **/
     public static <T> T getBean(Class<T> clazz) {
         return getApplicationContext().getBean(clazz);
     }
 
     /**
-     * Created on 2022/10/5
-     * 根据bean名和类获取bean
-     * @author Hong Luo
+     * <strong>根据bean名和类获取bean</strong>
+     *
      * @param name bean名
      * @param clazz 类
-     * @return  bean
+     * @return bean
      **/
     public static <T> T getBean(String name, Class<T> clazz) {
         return getApplicationContext().getBean(name, clazz);
     }
 
     /**
-     * Created on 2022/10/5
-     * 断言是否存在上下文，没有则抛出异常
-     * @author Hong Luo
+     * <strong>断言是否存在上下文，没有则抛出异常</strong>
      **/
     private static void assertApplicationContext() {
         if (applicationContext == null) {
@@ -84,9 +93,9 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * Created on 2022/10/5
-     * 推送事件
-     * @author Hong Luo
+     * <strong>推送事件</strong>
+     *
+     * @param event 事件
      **/
     public static void publishEvent(ApplicationEvent event) {
         if (applicationContext != null) {
@@ -97,9 +106,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * Created on 2022/10/5
-     * 清理本工具
-     * @author Hong Luo
+     * <strong>清理Holder</strong>
      **/
     public static void clearHolder() {
         applicationContext = null;

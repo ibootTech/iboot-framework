@@ -23,23 +23,31 @@ import java.util.Locale;
 import java.util.stream.Collectors;
 
 /**
+ * <strong>core模块启动配置类</strong>
+ * <p>配置项有框架启动bean、聚合messageSource bean、关机处理等</p>
  * Created on 2022/10/2
- * core模块启动配置类
- * @author Hong Luo
- * @Email luohong@iboot.tech
- * @Desc 配置项有框架启动bean、聚合messageSource bean、关机处理等
+ *
+ * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
 public class CoreConfiguration implements DisposableBean {
+    /**
+     * slf4j日志打印工具
+     */
     private final Logger logger = LoggerFactory.getLogger(CoreConfiguration.class);
 
+    /**
+     * 聚合信息源
+     */
     private AssembleMessageSource assembleMessageSource;
+
+    /**
+     * IBoot配置
+     */
     @Resource
     private IBootProperties iBootProperties;
 
     /**
-     * Created on 2022/10/2
-     * 框架启动bean
-     * @author Hong Luo
+     * <strong>框架启动bean</strong>
      **/
     @Bean
     @DependsOn(BeanName.ASSEMBLE_MESSAGE_SOURCE)
@@ -54,9 +62,10 @@ public class CoreConfiguration implements DisposableBean {
     }
 
     /**
-     * Created on 2022/10/5
-     * 聚合信息源bean
-     * @author Hong Luo
+     * <strong>聚合信息源bean</strong>
+     *
+     * @param objectProvider 信息源提供
+     * @return MessageSource 信息源
      **/
     @Bean
     @Primary
@@ -72,9 +81,7 @@ public class CoreConfiguration implements DisposableBean {
     }
 
     /**
-     * Created on 2022/10/2
-     * 销毁程序
-     * @author Hong Luo
+     * <strong>销毁程序</strong>
      **/
     @Override
     public void destroy() throws Exception {
