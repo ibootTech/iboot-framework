@@ -1,10 +1,9 @@
-package tech.iboot.framework.starter.web.configuration;
+package tech.iboot.framework.starters.web.configuration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.ansi.AnsiColor;
 import org.springframework.boot.ansi.AnsiOutput;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -17,7 +16,7 @@ import java.util.Optional;
 import java.util.function.Consumer;
 
 /**
- * <strong>web配置</strong>
+ * <strong>web自动配置</strong>
  * <p>跨域bean配置</p>
  * Created on 2022/10/14
  *
@@ -47,8 +46,9 @@ public class WebConfiguration {
     private AssembleMessageSource assembleMessageSource;
 
     /**
-     * <strong>跨域bean</strong>
-     **/
+     * 跨域过滤bean
+     * @return corsFilter
+     */
     @Bean
     @DependsOn(BeanName.IBOOT_INIT)
     public CorsFilter corsFilter() {

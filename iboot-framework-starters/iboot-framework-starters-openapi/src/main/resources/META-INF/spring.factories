@@ -1,0 +1,4 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+tech.iboot.framework.starters.openapi.configuration.OpenapiProperties,\
+tech.iboot.framework.starters.openapi.configuration.OpenApiConfiguration

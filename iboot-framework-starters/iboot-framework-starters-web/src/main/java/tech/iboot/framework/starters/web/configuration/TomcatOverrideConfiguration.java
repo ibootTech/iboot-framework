@@ -1,11 +1,10 @@
-package tech.iboot.framework.starter.web.configuration;
+package tech.iboot.framework.starters.web.configuration;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.core.env.Environment;
 
 import javax.annotation.Resource;
@@ -38,6 +37,13 @@ public class TomcatOverrideConfiguration implements BeanPostProcessor {
     @Resource
     private WebProperties webProperties;
 
+    /**
+     * 服务初始化后重新配置TomcatWebServerFactoryCustomizer
+     * @param bean bean对象
+     * @param beanName bean名
+     * @return TomcatWebServerFactoryCustomizer
+     * @throws BeansException 异常
+     */
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof TomcatWebServerFactoryCustomizer) {

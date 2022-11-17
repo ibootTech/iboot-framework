@@ -36,6 +36,11 @@
             <artifactId>iboot-framework-starters-web</artifactId>
             <version>${iboot-framework.version}</version>
         </dependency>
+        <dependency>
+            <groupId>tech.iboot</groupId>
+            <artifactId>iboot-framework-starters-openapi</artifactId>
+            <version>${iboot-framework.version}</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>

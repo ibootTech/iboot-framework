@@ -66,7 +66,7 @@ public class AbstractMessageSourceI18nConfiguration {
         return splitPath;
     };
     /**
-     * <strong>获取i18n信息源</strong>
+     * 获取i18n信息源
      * @return ResourceBundleMessageSource
      **/
     public static ResourceBundleMessageSource buildI18nMessageSourceConfiguration() {

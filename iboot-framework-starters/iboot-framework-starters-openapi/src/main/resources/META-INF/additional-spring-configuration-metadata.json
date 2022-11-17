@@ -1,0 +1,88 @@
+{
+  "groups": [
+    {
+      "name": "iboot.openapi",
+      "type": "tech.iboot.framework.starters.openapi.configuration.OpenapiProperties",
+      "sourceType": "tech.iboot.framework.starters.openapi.configuration.OpenapiProperties"
+    },
+    {
+      "name": "iboot.openapi.info",
+      "type": "io.swagger.v3.oas.models.info.Info",
+      "sourceType": "tech.iboot.framework.starters.openapi.configuration.OpenapiProperties",
+      "sourceMethod": "getInfo()"
+    },
+    {
+      "name": "iboot.openapi.info.title",
+      "type": "io.swagger.v3.oas.models.info.Info$title",
+      "sourceType": "io.swagger.v3.oas.models.info.Info",
+      "sourceMethod": "getTitle()"
+    },
+    {
+      "name": "iboot.openapi.info.version",
+      "type": "io.swagger.v3.oas.models.info.Info$version",
+      "sourceType": "io.swagger.v3.oas.models.info.Info",
+      "sourceMethod": "getVersion()"
+    },
+    {
+      "name": "iboot.openapi.info.description",
+      "type": "io.swagger.v3.oas.models.info.Info$description",
+      "sourceType": "io.swagger.v3.oas.models.info.Info",
+      "sourceMethod": "getDescription()"
+    },
+    {
+      "name": "iboot.openapi.info.termsOfService",
+      "type": "io.swagger.v3.oas.models.info.Info$termsOfService",
+      "sourceType": "io.swagger.v3.oas.models.info.Info",
+      "sourceMethod": "getTermsOfService()"
+    },
+    {
+      "name": "iboot.openapi.info.contact",
+      "type": "io.swagger.v3.oas.models.info.Info$contact",
+      "sourceType": "io.swagger.v3.oas.models.info.Info",
+      "sourceMethod": "getContact()"
+    },
+    {
+      "name": "iboot.openapi.info.contact.name",
+      "type": "io.swagger.v3.oas.models.info.Contact$name",
+      "sourceType": "io.swagger.v3.oas.models.info.Contact",
+      "sourceMethod": "getName()"
+    },
+    {
+      "name": "iboot.openapi.info.contact.url",
+      "type": "io.swagger.v3.oas.models.info.Contact$url",
+      "sourceType": "io.swagger.v3.oas.models.info.Contact",
+      "sourceMethod": "getUrl()"
+    },
+    {
+      "name": "iboot.openapi.info.contact.email",
+      "type": "io.swagger.v3.oas.models.info.Contact$email",
+      "sourceType": "io.swagger.v3.oas.models.info.Contact",
+      "sourceMethod": "getEmail()"
+    },
+    {
+      "name": "iboot.openapi.info.license",
+      "type": "io.swagger.v3.oas.models.info.License",
+      "sourceType": "io.swagger.v3.oas.models.info.Info",
+      "sourceMethod": "getLicense()"
+    },
+    {
+      "name": "iboot.openapi.info.license.name",
+      "type": "io.swagger.v3.oas.models.info.License$name",
+      "sourceType": "io.swagger.v3.oas.models.info.License",
+      "sourceMethod": "getName()"
+    },
+    {
+      "name": "iboot.openapi.info.license.url",
+      "type": "io.swagger.v3.oas.models.info.License$url",
+      "sourceType": "io.swagger.v3.oas.models.info.License",
+      "sourceMethod": "getUrl()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "iboot.openapi",
+      "type": "tech.iboot.framework.starters.openapi.configuration.OpenapiProperties",
+      "sourceType": "tech.iboot.framework.starters.openapi.configuration.OpenapiProperties"
+    }
+  ]
+}

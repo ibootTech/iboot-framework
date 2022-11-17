@@ -16,7 +16,7 @@ public abstract class StringUtil {
     private static final Function<String, String> DELIMITER_HANDLE = d -> d == null || "".equals(d) ? "," : d;
 
     /**
-     * <strong>数组组转字符串，默认用逗号隔开</strong>
+     * 数组组转字符串，默认用逗号隔开
      * @param charSequences 数组
      * @return String 转换后字符串
      **/
@@ -25,7 +25,7 @@ public abstract class StringUtil {
     }
 
     /**
-     * <strong>数组组转字符串</strong>
+     * 数组组转字符串
      * @param delimiter 分隔符
      * @param charSequences 数组
      * @return String 转换后字符串
@@ -35,7 +35,7 @@ public abstract class StringUtil {
     }
 
     /**
-     * <strong>数组组转字符串，默认用逗号隔开</strong>
+     * 数组组转字符串，默认用逗号隔开
      * @param charSequence 数组
      * @return String 转换后字符串
      **/
@@ -44,7 +44,7 @@ public abstract class StringUtil {
     }
 
     /**
-     * <strong>数组组转字符串</strong>
+     * 数组组转字符串
      * @param delimiter 分隔符
      * @param charSequence 数组
      * @return String 转换后字符串

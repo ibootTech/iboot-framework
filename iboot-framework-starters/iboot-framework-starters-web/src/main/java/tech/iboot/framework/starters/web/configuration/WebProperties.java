@@ -1,7 +1,6 @@
-package tech.iboot.framework.starter.web.configuration;
+package tech.iboot.framework.starters.web.configuration;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import tech.iboot.framework.core.properties.IBootProperties;
 
 import java.util.List;
@@ -13,8 +12,12 @@ import java.util.List;
  *
  * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
-@ConfigurationProperties(IBootProperties.PREFIX)
+@ConfigurationProperties(WebProperties.PREFIX )
 public class WebProperties {
+    /**
+     * 前缀
+     */
+    public static final String PREFIX = IBootProperties.PREFIX + ".web";
     /**
      * 跨域过滤配置
      */

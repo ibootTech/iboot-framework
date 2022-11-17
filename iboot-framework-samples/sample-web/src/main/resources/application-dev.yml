@@ -9,15 +9,26 @@ spring:
 iboot:
   banner:
     enabled: true
-  tomcat:
+  web:
+   tomcat:
     override: true
     access-log:
       enabled: true
       pattern: '%h %l %u %t "%r" %s %b %D %{User-Agent}i'
     basedir: '../'
-  cors-filters:
+   cors-filters:
     - url: '/**'
       methods:
        - 'GET'
       allow-credentials: true
       max-age: 3600
+  openapi:
+    info:
+      description: 测试
+      contact:
+        name: luohong
+        url: https://iboot.tech/
+        email: luohong@iboot.tech
+      license:
+        name:  Apache License 2.0
+        url: http://www.apache.org/licenses/LICENSE-2.0.txt

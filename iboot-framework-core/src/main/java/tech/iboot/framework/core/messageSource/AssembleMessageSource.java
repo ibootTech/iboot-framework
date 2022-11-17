@@ -14,20 +14,19 @@ import java.util.Locale;
  **/
 public interface AssembleMessageSource extends MessageSource {
     /**
-     * <strong>添加信息源</strong>
-     * <p></p>
+     * 添加信息源
      * @param source 信息源集合
      **/
     void addMessageSources(Collection<MessageSource> source);
 
     /**
-     * <strong>添加信息源</strong>
+     * 添加信息源
      * @param source 信息源
      **/
     void addMessageSource(MessageSource source);
 
     /**
-     * <strong>根据code和信息源参数输出信息源</strong>
+     * 根据code和信息源参数输出信息源
      * @param code code
      * @param args 信息源参数
      * @return String 信息源
@@ -44,7 +43,7 @@ public interface AssembleMessageSource extends MessageSource {
     String msgWithDefault(String code, String defaultMessage, Object... args);
 
     /**
-     * <strong>根据code、locale、信息源参数输出信息源，没有输出默认值</strong>
+     * 根据code、locale、信息源参数输出信息源，没有输出默认值
      * @param code code
      * @param defaultMessage 默认值
      * @param locale locale

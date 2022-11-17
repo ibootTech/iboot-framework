@@ -55,7 +55,7 @@ public class PackageInfo {
     private JarFile jarFile;
     private PackageInfo() {}
     /**
-     * <strong>构造函数</strong>
+     * 构造函数
      *
      * @param clazz 类
      **/
@@ -74,7 +74,7 @@ public class PackageInfo {
     }
 
     /**
-     * <strong>从jar中获取信息</strong>
+     * 从jar中获取信息
      *
      * @param packageStr 字段信息
      * @param defaultStr 默认值
@@ -101,7 +101,7 @@ public class PackageInfo {
     }
 
     /**
-     * <strong>获取jar包信息</strong>
+     * 获取jar包信息
      *
      * @return java.util.jar.JarFile jar包文件
      **/

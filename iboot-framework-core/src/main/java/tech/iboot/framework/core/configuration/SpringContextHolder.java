@@ -24,7 +24,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     public SpringContextHolder() {}
 
     /**
-     * <strong>销毁后清理Holder</strong>
+     * 销毁后清理Holder
      * @throws Exception 异常
      **/
     @Override
@@ -33,7 +33,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * <strong>设置Holder</strong>
+     * 设置Holder
      *
      * @param applicationContext spring Application 上下文
      **/
@@ -43,7 +43,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * <strong>获取上下文</strong>
+     * 获取上下文
      *
      * @return 上下文
      **/
@@ -53,7 +53,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * <strong>根据类获取bean类型</strong>
+     * 根据类获取bean类型
      *
      * @param clazz 类
      * @return java.util.Collection<T>  bean类型
@@ -63,7 +63,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * <strong>根据类获取bean</strong>
+     * 根据类获取bean
      *
      * @param clazz 类
      * @return bean
@@ -73,7 +73,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * <strong>根据bean名和类获取bean</strong>
+     * 根据bean名和类获取bean
      *
      * @param name bean名
      * @param clazz 类
@@ -84,7 +84,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * <strong>断言是否存在上下文，没有则抛出异常</strong>
+     * 断言是否存在上下文，没有则抛出异常
      **/
     private static void assertApplicationContext() {
         if (applicationContext == null) {
@@ -93,7 +93,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * <strong>推送事件</strong>
+     * 推送事件
      *
      * @param event 事件
      **/
@@ -106,7 +106,7 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
     }
 
     /**
-     * <strong>清理Holder</strong>
+     * 清理Holder
      **/
     public static void clearHolder() {
         applicationContext = null;

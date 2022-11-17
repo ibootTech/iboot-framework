@@ -31,7 +31,7 @@ public class Result<T> implements Serializable {
     public Result() {}
 
     /**
-     * <strong>构造函数</strong>
+     * 构造函数
      *
      * @param code 状态码
      * @param data 数据
@@ -44,7 +44,7 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * <strong>构建成功响应实体</strong>
+     * 构建成功响应实体
      *
      * @return Result<T>
      **/
@@ -53,7 +53,7 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * <strong>构建成功响应实体</strong>
+     * 构建成功响应实体
      *
      * @param data  数据
      * @return Result<T>
@@ -63,7 +63,7 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * <strong>构建成功响应实体</strong>
+     * 构建成功响应实体
      *
      * @param msg 信息
      * @return Result<T>
@@ -73,7 +73,7 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * <strong>构建成功响应实体</strong>
+     * 构建成功响应实体
      *
      * @param data 数据
      * @param msg  信息
@@ -84,7 +84,7 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * <strong>构建失败响应实体</strong>
+     * 构建失败响应实体
      *
      * @return Result<T>
      **/
@@ -93,7 +93,7 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * <strong>构建失败响应实体</strong>
+     * 构建失败响应实体
      *
      * @param data 数据
      * @return Result<T>
@@ -103,7 +103,7 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * <strong>构建失败响应实体</strong>
+     * 构建失败响应实体
      *
      * @param msg 信息
      * @return Result<T>
@@ -113,7 +113,7 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * <strong>构建失败响应实体</strong>
+     * 构建失败响应实体
      *
      * @param data 数据
      * @param msg 信息
@@ -124,7 +124,7 @@ public class Result<T> implements Serializable {
     }
 
     /**
-     * <strong>构建响应实体</strong>
+     * 构建响应实体
      *
      * @param code 状态码
      * @param data 数据

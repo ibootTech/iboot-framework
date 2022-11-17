@@ -22,7 +22,7 @@ public class MsHandler {
     private AssembleMessageSource assembleMessageSource;
 
     /**
-     * <strong>实例化信息源</strong>
+     * 实例化信息源
      * @return MsHandler 信息源实例
      **/
     public static MsHandler getInstance() {
@@ -36,7 +36,7 @@ public class MsHandler {
     }
 
     /**
-     * <strong>根据code和信息源参数输出信息源</strong>
+     * 根据code和信息源参数输出信息源
      * @param code code
      * @param args 信息源参数
      * @return String 信息源
@@ -46,7 +46,7 @@ public class MsHandler {
     }
 
     /**
-     * <strong>根据code和信息源参数输出信息源，没有则输出默认值</strong>
+     * 根据code和信息源参数输出信息源，没有则输出默认值
      * @param code code
      * @param defaultMessage 默认值
      * @param args 信息源参数

@@ -26,7 +26,7 @@ public abstract class ResourceBundleUtil {
     public static final String FILE_TYPE_XML = ".xml";
 
     /**
-     * <strong>根据文件名获取资源文件</strong>
+     * 根据文件名获取资源文件
      * @param fileName 文件名
      * @return Resource 资源文件
      **/
@@ -35,7 +35,7 @@ public abstract class ResourceBundleUtil {
     }
 
     /**
-     * <strong>根据类加载器和文件名获取资源文件</strong>
+     * 根据类加载器和文件名获取资源文件
      * @param classLoader 类加载器
      * @param fileName 文件名
      * @return Resource 资源文件
@@ -45,7 +45,7 @@ public abstract class ResourceBundleUtil {
     }
 
     /**
-     * <strong>根据路径匹配信息获取资源文件数组</strong>
+     * 根据路径匹配信息获取资源文件数组
      * @param pathMatch 路径匹配信息
      * @return Resource[] 资源文件数组
      **/

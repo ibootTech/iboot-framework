@@ -19,6 +19,7 @@
 
     <modules>
         <module>iboot-framework-starters-web</module>
+        <module>iboot-framework-starters-openapi</module>
     </modules>
 
 </project>

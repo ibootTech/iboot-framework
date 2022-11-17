@@ -1,4 +1,4 @@
-package tech.iboot.framework.starter.web.configuration;
+package tech.iboot.framework.starters.web.configuration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,8 +66,7 @@ public abstract class AbstractCorsConfiguration {
     };
 
     /**
-     * <strong>跨域配置</strong>
-     * <p></p>
+     * 跨域配置
      * @param corsFilter 跨域配置
      * @return CorsConfiguration 跨域配置
      **/

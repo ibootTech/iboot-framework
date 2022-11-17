@@ -22,7 +22,7 @@ public final class IBootThreadLocalManager {
 
 
     /**
-     * <strong>配置信息保存到ThreadLocal</strong>
+     * 配置信息保存到ThreadLocal
      * @param key key
      * @param object 值
      **/
@@ -31,7 +31,7 @@ public final class IBootThreadLocalManager {
     }
 
     /**
-     * <strong>从ThreadLocal获取配置</strong>
+     * 从ThreadLocal获取配置
      * @param key key
      * @param clazz 类
      * @return T 配置实体
@@ -42,7 +42,7 @@ public final class IBootThreadLocalManager {
     }
 
     /**
-     * <strong>从ThreadLocal获取配置</strong>
+     * 从ThreadLocal获取配置
      * @return ConcurrentHashMap 配置
      **/
     public static ConcurrentHashMap<String, Object> getProperties() {
@@ -53,7 +53,7 @@ public final class IBootThreadLocalManager {
     }
 
     /**
-     * <strong>清理ThreadLocal</strong>
+     * 清理ThreadLocal
      **/
     public static void clean() {
         THREAD_LOCAL_PROPERTY.remove();

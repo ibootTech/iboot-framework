@@ -30,15 +30,15 @@ public class BannerPrinter {
     public BannerPrinter() {}
 
     /**
-     * <strong>构造函数</strong>
-     * @param classMain   需要打印的类
+     * 构造函数
+     * @param classMain 需要打印的类
      **/
     public BannerPrinter(Class<?> classMain) {
         logger = LoggerFactory.getLogger(classMain);
     }
 
     /**
-     * <strong>构造函数</strong>
+     * 构造函数
      * @param logger slf4j打印对象
      **/
     public BannerPrinter(Logger logger) {
@@ -46,7 +46,7 @@ public class BannerPrinter {
     }
 
     /**
-     * <strong>打印资源文件信息</strong>
+     * 打印资源文件信息
      * @param resource 资源文件
      **/
     public void print(Resource resource) {
@@ -54,7 +54,7 @@ public class BannerPrinter {
     }
 
     /**
-     * <strong>打印资源文件信息和包信息</strong>
+     * 打印资源文件信息和包信息
      * @param resource 资源文件
      * @param info 包信息
      **/
@@ -63,7 +63,7 @@ public class BannerPrinter {
     }
 
     /**
-     * <strong>打印包信息</strong>
+     * 打印包信息
      * @param info 包信息
      **/
     public void print(PackageInfo info) {
@@ -71,7 +71,7 @@ public class BannerPrinter {
     }
 
     /**
-     * <strong>输出资源文件信息</strong>
+     * 输出资源文件信息
      * @param resource 资源文件
      * @return String 资源字符串
      **/
@@ -85,7 +85,7 @@ public class BannerPrinter {
     }
 
     /**
-     * <strong>输出包信息</strong>
+     * 输出包信息
      * @param info 包信息
      * @return String 包信息字符串
      **/

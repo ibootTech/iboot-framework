@@ -23,7 +23,7 @@ import java.util.Locale;
 import java.util.stream.Collectors;
 
 /**
- * <strong>core模块启动配置类</strong>
+ * <strong>core模块自动配置类</strong>
  * <p>配置项有框架启动bean、聚合messageSource bean、关机处理等</p>
  * Created on 2022/10/2
  *
@@ -47,7 +47,7 @@ public class CoreConfiguration implements DisposableBean {
     private IBootProperties iBootProperties;
 
     /**
-     * <strong>框架启动bean</strong>
+     * 框架启动bean
      **/
     @Bean
     @DependsOn(BeanName.ASSEMBLE_MESSAGE_SOURCE)
@@ -62,7 +62,7 @@ public class CoreConfiguration implements DisposableBean {
     }
 
     /**
-     * <strong>聚合信息源bean</strong>
+     * 聚合信息源bean
      *
      * @param objectProvider 信息源提供
      * @return MessageSource 信息源
@@ -81,7 +81,7 @@ public class CoreConfiguration implements DisposableBean {
     }
 
     /**
-     * <strong>销毁程序</strong>
+     * 销毁程序
      **/
     @Override
     public void destroy() throws Exception {

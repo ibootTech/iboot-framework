@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class ClassUtil {
 
     /**
-     * <strong>根据类获取所有字段</strong>
+     * 根据类获取所有字段
      * @param clazz 类
      * @return List<Field> 字段列表
      **/
@@ -32,7 +32,7 @@ public class ClassUtil {
     }
 
     /**
-     * <strong>根据类和注解类获取所有字段</strong>
+     * 根据类和注解类获取所有字段
      * @param clazz 类
      * @param annotationClass 注解类
      * @return List<Field> 字段列表
@@ -44,7 +44,7 @@ public class ClassUtil {
     }
 
     /**
-     * <strong>根据实体和注解类获取字段实际值</strong>
+     * 根据实体和注解类获取字段实际值
      * @param t 实体
      * @param annotationClass 注解类
      * @return V 字段实际值
@@ -65,7 +65,7 @@ public class ClassUtil {
     }
 
     /**
-     * <strong>获取main函数所在类</strong>
+     * 获取main函数所在类
      * @return Class<?> 主类
      **/
     public static Class<?> deduceMainApplicationClass() {

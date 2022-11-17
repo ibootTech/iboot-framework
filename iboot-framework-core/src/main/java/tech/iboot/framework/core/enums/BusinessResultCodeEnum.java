@@ -32,7 +32,7 @@ public enum BusinessResultCodeEnum {
     private final MsHandler msHandle = MsHandler.getInstance();
 
     /**
-     * <strong>构造函数</strong>
+     * 构造函数
      * @param code 状态码
      * @param msg 信息
      **/

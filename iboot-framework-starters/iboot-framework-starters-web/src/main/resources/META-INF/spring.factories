@@ -1,5 +1,5 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-tech.iboot.framework.starter.web.configuration.WebProperties,\
-tech.iboot.framework.starter.web.configuration.TomcatOverrideConfiguration,\
-tech.iboot.framework.starter.web.configuration.WebConfiguration
+tech.iboot.framework.starters.web.configuration.WebProperties,\
+tech.iboot.framework.starters.web.configuration.TomcatOverrideConfiguration,\
+tech.iboot.framework.starters.web.configuration.WebConfiguration
