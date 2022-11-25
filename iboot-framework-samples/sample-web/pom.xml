@@ -13,7 +13,7 @@
     <artifactId>sample-web</artifactId>
     <packaging>jar</packaging>
     <properties>
-        <spring-boot.version>2.6.12</spring-boot.version>
+        <spring-boot.version>3.0.0</spring-boot.version>
         <iboot-framework.version>PanGu-1.0-SNAPSHOT</iboot-framework.version>
     </properties>
     <dependencies>

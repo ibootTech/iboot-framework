@@ -1,0 +1,3 @@
+tech.iboot.framework.core.properties.IBootProperties
+tech.iboot.framework.core.configuration.CoreConfiguration
+tech.iboot.framework.core.configuration.SpringContextHolder

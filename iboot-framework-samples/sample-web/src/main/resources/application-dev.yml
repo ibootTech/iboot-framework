@@ -5,7 +5,7 @@ logging:
     path: ../logs
 spring:
   main:
-    banner-mode: off
+    banner-mode: console
 iboot:
   banner:
     enabled: true

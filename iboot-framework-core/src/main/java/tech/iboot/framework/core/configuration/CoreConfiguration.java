@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ansi.AnsiColor;
 import org.springframework.boot.ansi.AnsiOutput;
 import org.springframework.context.MessageSource;
@@ -18,7 +19,6 @@ import tech.iboot.framework.core.properties.IBootProperties;
 import tech.iboot.framework.core.utils.BannerPrinter;
 import tech.iboot.framework.core.utils.ResourceBundleUtil;
 
-import javax.annotation.Resource;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
@@ -43,7 +43,7 @@ public class CoreConfiguration implements DisposableBean {
     /**
      * IBoot配置
      */
-    @Resource
+    @Autowired
     private IBootProperties iBootProperties;
 
     /**

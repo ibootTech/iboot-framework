@@ -64,7 +64,7 @@ public class PackageInfo {
         this.version = getValueFromJar(this.clazz.getPackage().getImplementationVersion(), DEFAULT_VERSION, Attributes.Name.IMPLEMENTATION_VERSION);
         this.title = getValueFromJar(this.clazz.getPackage().getImplementationTitle(), DEFAULT_TITLE, Attributes.Name.IMPLEMENTATION_TITLE);
         this.vendor = getValueFromJar(this.clazz.getPackage().getImplementationVendor(), DEFAULT_VENDOR,
-                Attributes.Name.IMPLEMENTATION_VENDOR, Attributes.Name.IMPLEMENTATION_VENDOR_ID);
+                Attributes.Name.IMPLEMENTATION_VENDOR, Attributes.Name.IMPLEMENTATION_VENDOR);
         try {
             if (this.jarFile != null) {
                 this.jarFile.close();

@@ -17,10 +17,6 @@
     <url>https://github.com/ibootTech/iboot-framework/tree/master/iboot-framework-core</url>
     <description>iBoot Framework Core Module.</description>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
 
     <dependencies>
         <dependency>

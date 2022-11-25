@@ -2,6 +2,7 @@ package tech.iboot.framework.starters.openapi.configuration;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import tech.iboot.framework.core.bean.PackageInfo;
@@ -9,7 +10,6 @@ import tech.iboot.framework.core.messageSource.AssembleMessageSource;
 import tech.iboot.framework.core.utils.BannerPrinter;
 import tech.iboot.framework.core.utils.ClassUtil;
 
-import javax.annotation.Resource;
 import java.util.Optional;
 
 /**
@@ -28,7 +28,7 @@ public class OpenApiConfiguration {
     /**
      * 信息源
      */
-    @Resource
+    @Autowired
     private AssembleMessageSource assembleMessageSource;
 
     /**
@@ -40,7 +40,7 @@ public class OpenApiConfiguration {
      * 版本
      */
     private String version;
-    @Resource
+    @Autowired
     private OpenapiProperties openapiProperties;
 
     /**

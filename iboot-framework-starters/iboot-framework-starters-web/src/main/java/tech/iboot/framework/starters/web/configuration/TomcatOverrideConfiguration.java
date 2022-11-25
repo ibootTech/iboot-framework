@@ -1,13 +1,13 @@
 package tech.iboot.framework.starters.web.configuration;
 
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer;
 import org.springframework.core.env.Environment;
 
-import javax.annotation.Resource;
 import java.io.File;
 
 /**
@@ -22,19 +22,19 @@ public class TomcatOverrideConfiguration implements BeanPostProcessor {
     /**
      * 环境
      */
-    @Resource
+    @Autowired
     private Environment environment;
 
     /**
      * 服务配置
      */
-    @Resource
+    @Autowired
     private ServerProperties serverProperties;
 
     /**
      * web配置
      */
-    @Resource
+    @Autowired
     private WebProperties webProperties;
 
     /**

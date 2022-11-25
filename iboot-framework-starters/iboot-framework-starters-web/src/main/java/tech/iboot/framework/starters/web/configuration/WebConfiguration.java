@@ -2,6 +2,7 @@ package tech.iboot.framework.starters.web.configuration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ansi.AnsiColor;
 import org.springframework.boot.ansi.AnsiOutput;
 import org.springframework.context.annotation.Bean;
@@ -11,7 +12,6 @@ import org.springframework.web.filter.CorsFilter;
 import tech.iboot.framework.core.configuration.BeanName;
 import tech.iboot.framework.core.messageSource.AssembleMessageSource;
 
-import javax.annotation.Resource;
 import java.util.Optional;
 import java.util.function.Consumer;
 
@@ -36,13 +36,13 @@ public class WebConfiguration {
     /**
      * web配置
      */
-    @Resource
+    @Autowired
     private WebProperties webProperties;
 
     /**
      * 信息源
      */
-    @Resource
+    @Autowired
     private AssembleMessageSource assembleMessageSource;
 
     /**
