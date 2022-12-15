@@ -1,0 +1,27 @@
+server:
+  port: 82
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:mysql://service.tech:3309/base_admin_dev?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+mybatis-plus:
+  GlobalConfig:
+    banner: false
+    DbConfig:
+      idType: ASSIGN_ID
+  iboot:
+    pagination:
+      max-limit: 1100
+    mapper:
+      sql-session-factory-bean-name: sqlSessionFactory
+      base-package: "tech.iboot.framework.sample.**.mapper"
+iboot:
+  web:
+    tomcat:
+      override: true
+      access-log:
+        enabled: false

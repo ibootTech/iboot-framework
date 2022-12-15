@@ -11,7 +11,7 @@ import tech.iboot.framework.core.messageSource.AssembleMessageSource;
  *
  * @author <a href="mailto:luohong@iboot.tech">Hong Luo</a>
  **/
-@SuppressWarnings("SpringJavaAutowiredMembersInspection")
+@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 public class WebCrudControllerImpl<T, K, S extends CrudService<T, K>> implements WebCrudController<T, K> {
     @Autowired
     S service;

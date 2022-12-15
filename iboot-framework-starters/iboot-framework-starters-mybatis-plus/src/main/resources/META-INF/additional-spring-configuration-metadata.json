@@ -1,0 +1,59 @@
+{
+  "groups": [
+    {
+      "name": "mybatis-plus.iboot",
+      "type": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties",
+      "sourceType": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties"
+    },
+    {
+      "name": "mybatis-plus.iboot.mapper",
+      "type": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Mapper",
+      "sourceType": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties",
+      "sourceMethod": "getMapper()"
+    },
+    {
+      "name": "mybatis-plus.iboot.mapper.sql-session-factory-bean-name",
+      "type": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Mapper$sqlSessionFactoryBeanName",
+      "sourceType": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Mapper",
+      "sourceMethod": "getSqlSessionFactoryBeanName()"
+    },
+    {
+      "name": "mybatis-plus.iboot.mapper.base-package",
+      "type": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Mapper$basePackage",
+      "sourceType": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Mapper",
+      "sourceMethod": "getBasePackage()"
+    },
+    {
+      "name": "mybatis-plus.iboot.pagination",
+      "type": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Pagination",
+      "sourceType": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties",
+      "sourceMethod": "getPagination()"
+    },
+    {
+      "name": "mybatis-plus.iboot.pagination.max-limit",
+      "type": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Pagination$maxLimit",
+      "sourceType": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Pagination",
+      "sourceMethod": "getMaxLimit()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mybatis-plus.iboot.mapper.sql-session-factory-bean-name",
+      "type": "java.lang.String",
+      "sourceType": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Mapper",
+      "defaultValue": "sqlSessionFactory"
+    },
+    {
+      "name": "mybatis-plus.iboot.mapper.base-package",
+      "type": "java.lang.String",
+      "sourceType": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Mapper",
+      "defaultValue": "tech.iboot.framework.common.mybatisPlus.mapper"
+    },
+    {
+      "name": "mybatis-plus.iboot.pagination.max-limit",
+      "type": "java.lang.Long",
+      "sourceType": "tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties$Pagination",
+      "defaultValue": 1000
+    }
+  ]
+}

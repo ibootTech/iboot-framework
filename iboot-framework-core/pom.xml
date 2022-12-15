@@ -17,6 +17,13 @@
     <url>https://github.com/ibootTech/iboot-framework/tree/master/iboot-framework-core</url>
     <description>iBoot Framework Core Module.</description>
 
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <fastjson.version>2.13.2</fastjson.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -38,6 +45,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
     </dependencies>
 

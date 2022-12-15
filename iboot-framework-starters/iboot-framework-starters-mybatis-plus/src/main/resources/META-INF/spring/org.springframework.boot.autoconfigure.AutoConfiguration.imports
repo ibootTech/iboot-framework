@@ -1,0 +1,3 @@
+tech.iboot.framework.starters.mybatisPlus.configuration.MapperScannerConfiguration
+tech.iboot.framework.starters.mybatisPlus.configuration.MybatisPlusProperties
+tech.iboot.framework.starters.mybatisPlus.configuration.MyBatisPlusConfiguration

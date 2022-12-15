@@ -2,15 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>tech.iboot</groupId>
         <artifactId>iboot-framework-samples</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sample-web</artifactId>
+    <artifactId>sample-mybatis-plus</artifactId>
     <packaging>jar</packaging>
 
     <properties>
@@ -21,17 +21,13 @@
         <spring-boot.version>3.0.0</spring-boot.version>
 
         <iboot-framework.version>PanGu-1.0-SNAPSHOT</iboot-framework.version>
+        <lombok.version>1.18.24</lombok.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>tech.iboot</groupId>
@@ -45,8 +41,22 @@
         </dependency>
         <dependency>
             <groupId>tech.iboot</groupId>
+            <artifactId>iboot-framework-starters-mybatis-plus</artifactId>
+            <version>${iboot-framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>tech.iboot</groupId>
             <artifactId>iboot-framework-starters-openapi</artifactId>
             <version>${iboot-framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -61,14 +71,14 @@
         </dependencies>
     </dependencyManagement>
     <build>
-        <finalName>sample-web</finalName>
+        <finalName>sample-mybatis-plus</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>tech.iboot.framework.sample.web.WebApplication</mainClass>
+                    <mainClass>tech.iboot.framework.sample.mybatisPlus.MyBatisPlusApplication</mainClass>
                     <executable>true</executable>
                 </configuration>
                 <executions>
@@ -94,4 +104,5 @@
             </resource>
         </resources>
     </build>
+
 </project>

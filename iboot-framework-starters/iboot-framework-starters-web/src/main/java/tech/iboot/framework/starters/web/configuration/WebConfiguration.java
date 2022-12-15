@@ -9,8 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+import tech.iboot.framework.core.bean.PackageInfo;
 import tech.iboot.framework.core.configuration.BeanName;
 import tech.iboot.framework.core.messageSource.AssembleMessageSource;
+import tech.iboot.framework.core.utils.BannerPrinter;
 
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -60,6 +62,7 @@ public class WebConfiguration {
         });
         logger.info(AnsiOutput.toString(AnsiColor.GREEN,
                 assembleMessageSource.msg("register.success", CORS_FILTER), AnsiColor.DEFAULT));
+        new BannerPrinter(WebConfiguration.class).print(new PackageInfo(WebConfiguration.class));
         return new CorsFilter(source);
     }
 }
